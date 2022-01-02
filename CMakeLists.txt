@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.21)
+project(bss)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(gason/src)
+include_directories(includes)
+set(sources ${sources})
+set(sources ${sources} includes/calculations.cpp)
+set(sources ${sources} includes/calculations.h)
+set(sources ${sources} includes/json.hpp)
+set(sources ${sources} geojson.hh)
+set(sources ${sources} geojson.cc)
+set(sources ${sources} gason/src/gason.h)
+set(sources ${sources} gason/src/gason.cpp)
+set(sources ${sources} main.cpp)
+add_executable(bss ${sources})
+#add_executable(parser ${sources})
